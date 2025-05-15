@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora de Ponto</title>
+    <link rel="stylesheet" href="calculadora.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculadora de Ponto</h1>
+      <form id="formPonto">
+        <label>
+          Hora de entrada:
+          <input type="time" id="horaEntrada" required />
+        </label>
+        <div class="aviso" id="avisoPadrao">
+          Usando <strong>30 minutos</strong> de intervalo como padrão.
+        </div>
+        <div class="opcional">
+          <strong>Opcional:</strong> Informe o horário real do intervalo para
+          cálculo exato:
+        </div>
+        <label>
+          Saída para intervalo:
+          <input type="time" id="saidaIntervalo" />
+        </label>
+        <label>
+          Retorno do intervalo:
+          <input type="time" id="voltaIntervalo" />
+        </label>
+        <button type="submit">Calcular horários de saída</button>
+      </form>
+      <div
+        class="aviso-vermelho"
+        id="avisoIntervaloCurto"
+        style="display: none"
+      ></div>
+      <div class="resultado" id="resultado"></div>
+    </div>
+    <script src="calculadora.js"></script>
+  </body>
+</html>
